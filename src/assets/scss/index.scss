@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import "./var";
+$color-scheme: (
+    (theme1,$color1, $color2, $color3, $color4, $color5),
+    (theme2,$color1-fresh, $color2-fresh, $color3-fresh, $color4-fresh, $color5-fresh),
+);
+
+@mixin theme($theme-name, $color1, $color2, $color3, $color4, $color5) {
+  [data-theme='#{$theme-name}'] {
+    border: none;
+    padding: 5px 15px;
+    color: $color1;
+    background: $color2;
+
+    // 假设这段是没有做主题功能之前的sass代码 start
+    .button{
+      background: $color3;
+      color: $color4;
+    }
+    .test{
+      background: $color5;
+    }
+    // 假设这段是没有做主题功能之前的sass代码 end
+
+  }
+}
+
+@each $theme-name, $color1, $color2, $color3, $color4, $color5 in $color-scheme {
+  @include theme($theme-name, $color1, $color2, $color3, $color4, $color5);
+}
+
+
+
+
+
