@@ -1,13 +1,12 @@
 <template>
     <table>
         <tr>
-            <td @click="toggle">{{ model.name }}</td>
-
+            <td width="200px" @click="toggle">{{ model.name }}</td>
+            <td>pppppp</td>
         </tr>
         <tr v-show="open" v-for="(model,index) in model.children"
-            :key="index"
-            >
-            <td >
+            :key="index">
+            <td colspan="2">
                 <tree-grid-item :model="model"> </tree-grid-item>
             </td>
         </tr>
