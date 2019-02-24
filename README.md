@@ -33,7 +33,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 vue cli 创建的项目默认安装postcss，且默认安装配置了三个plugin，具体参考项目根目录下的[.postcsssrc.js](.postcssrc.js)
 
-## 使用 postcss-utils
+## 使用 [postcss-utils](https://npm.taobao.org/package/postcss-utils)
 
 ```bash
 
