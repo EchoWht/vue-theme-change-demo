@@ -54,8 +54,7 @@ module.exports = {
     "postcss-url": {},
     // to edit target browsers: use "browserslist" field in package.json
     "autoprefixer": {},
-    // 新增这一句
-    "postcss-utils":{}
+    "postcss-utils":{}// 新增这一句
   }
 }
 
