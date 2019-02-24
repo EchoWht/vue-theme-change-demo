@@ -2,6 +2,7 @@
   <div>
       <div class="disabled">{{msg}}</div>
       <div class="ellipsis"></div>
+      <div class="test-autoprefixer"></div>
   </div>
 </template>
 
@@ -21,5 +22,8 @@ export default {
   @import '~@/assets/scss/test-postcss-utils';
   .ellipsis {
     @utils-ellipsis;
+  }
+  .test-autoprefixer{
+    display: flex;
   }
 </style>

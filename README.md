@@ -33,7 +33,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 vue cli 创建的项目默认安装postcss，且默认安装配置了三个plugin，具体参考项目根目录下的[.postcsssrc.js](.postcssrc.js)
 
-## 使用 [postcss-utils](https://npm.taobao.org/package/postcss-utils)
+### 使用 [postcss-utils](https://npm.taobao.org/package/postcss-utils)
 
 ```bash
 
@@ -68,6 +68,76 @@ module.exports = {
 .disabled {
   @utils-disabled #ccc #f00 #333;
 }
+
+```
+
+### 使用autoprefixer
+
+css代码中的前缀支持和[package.json](package.json)中browserslist项有关，具体参考信息参考[browserslist](https://www.npmjs.com/package/browserslist)
+
+[package.json](package.json)中browserslist的默认值是,
+
+```json
+
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+
+```
+
+这种配置不会生成火狐相关的前缀，例如：
+
+```css
+
+  /**before**/
+  .test-autoprefixer {
+    display: flex;
+  }
+  
+  /**after**/
+  
+  .test-autoprefixer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+
+```
+
+如果改成以下配置
+
+```json
+
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8",
+    "Firefox > 20"
+  ]
+
+```
+
+则css会变成
+
+```css
+
+  /**before**/
+  .test-autoprefixer {
+    display: flex;
+  }
+  
+  /**after**/
+  
+  .test-autoprefixer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
 
 ```
 
