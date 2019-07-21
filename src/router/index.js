@@ -42,8 +42,8 @@ export default new Router({
     }
     ,
     {
-      path: '/test/p',
-      name:'p',
+      path: '/test/page-footer',
+      name:'page-footer',
       component: PageFooter
     }
   ]

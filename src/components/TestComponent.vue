@@ -1,6 +1,21 @@
 <template>
+<!--
+组件基础
+  props
+    通过 Prop 向子组件传递数据
+    监听子组件事件
+      子组件控制父组件的data
+      子组件传递数据到父组件
+  slot
+    父组件从子组件取数据
+
+https://cn.vuejs.org/v2/guide/components.html
+
+-->
   <div>
-    <page-footer :proverb="saying" >
+    <h2>组件基础</h2>
+    {{someTextFormParent}}
+    <page-footer :proverb="saying" v-on:change-parent="someTextFormParent=$event">
       <!--父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的。-->
       <!-- 官方：只要出现多个插槽，请始终为所有的插槽使用完整的基于 <template> 的语法：-->
       <template v-slot:default>
@@ -16,7 +31,6 @@
     </page-footer>
   </div>
 </template>
-
 <script>
   import PageFooter from './PageFooter'
     export default {
@@ -25,7 +39,8 @@
         data(){
             return{
               saying:{one:"通过prop传递对象"},
-              something:"父级模版的数据"
+              something:"父级组件的数据",
+              someTextFormParent:"父级组件的文字"
             }
         }
     }
