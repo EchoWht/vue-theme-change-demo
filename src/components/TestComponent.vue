@@ -1,0 +1,38 @@
+<template>
+  <div>
+    <page-footer :proverb="saying" >
+      <!--父级模板里的所有内容都是在父级作用域中编译的；子模板里的所有内容都是在子作用域中编译的。-->
+      <!-- 官方：只要出现多个插槽，请始终为所有的插槽使用完整的基于 <template> 的语法：-->
+      <template v-slot:default>
+        <p class="color-red">使用插槽方式追加一个带样式的p标签，并且用了<b>{{something}}</b></p>
+      </template>
+      <template v-slot:second>
+          <p>父组件把子组件的第二个插槽内容覆盖掉了</p>
+      </template>
+      <template v-slot:third="slotProps">
+        <!--   slotProps随意起     -->
+        <p>这个颜色是父组件从子组件取过来的：{{slotProps.color.red}}</p>
+      </template>
+    </page-footer>
+  </div>
+</template>
+
+<script>
+  import PageFooter from './PageFooter'
+    export default {
+        name: "TestProp",
+        components:{PageFooter},
+        data(){
+            return{
+              saying:{one:"通过prop传递对象"},
+              something:"父级模版的数据"
+            }
+        }
+    }
+</script>
+
+<style scoped>
+  .color-red{
+      color: darkred;
+  }
+</style>

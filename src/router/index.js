@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import TestSass from '@/components/TestSass'
 import TableGrid from '@/components/TableGrid'
 import TestPostcss from '@/components/TestPostcss'
+import HomePage from "../components/HomePage";
+import TestComponent from "../components/TestComponent";
+import PageFooter from "../components/PageFooter";
 
 Vue.use(Router)
 
@@ -12,7 +14,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HomePage
     },
     {
       path: '/test/sass',
@@ -22,7 +24,7 @@ export default new Router({
     }
     ,
     {
-      path: '/tablegrid',
+      path: '/test/tablegrid',
       name: 'TableGrid',
       component: TableGrid
     }
@@ -31,6 +33,18 @@ export default new Router({
       path: '/test/postcss',
       name:'TestPostcss',
       component: TestPostcss
+    }
+    ,
+    {
+      path: '/test/component',
+      name:'TestComponent',
+      component: TestComponent
+    }
+    ,
+    {
+      path: '/test/p',
+      name:'p',
+      component: PageFooter
     }
   ]
 })

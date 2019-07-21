@@ -1,6 +1,7 @@
 <template>
-    <div class="TreeGrid">
-        <h1>treegrid</h1>
+    <div>
+        <h2>TableGrid(TreeGrid)</h2>
+        <span>使用的是bootstrop的css</span>
         <table class="table table-hover">
             <tbody>
                 <tr v-for="item in items" :parent="item.parent" v-show="item.isShow" >

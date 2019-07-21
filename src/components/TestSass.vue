@@ -7,8 +7,8 @@
             </div>
         </div>
         <div>
-            <p @click="changeTheme('theme1')">方案1</p>
-            <p @click="changeTheme('theme2')">方案2</p>
+            <p @click="changeTheme('theme1')">点击使用配色方案1</p>
+            <p @click="changeTheme('theme2')">点击使用配色方案2</p>
         </div>
     </div>
 </template>
@@ -22,7 +22,6 @@
             }
         },
         mounted () {
-
             let storage=window.localStorage;
             let theme=storage['data-theme'];
             if (!theme){
