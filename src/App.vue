@@ -9,6 +9,7 @@
         <li><router-link to="/test/postcss">如何使用postcss-utils</router-link></li>
         <li><router-link to="/test/component">使用component</router-link></li>
         <li><router-link to="/test/keep-alive">使用keep-alive</router-link></li>
+        <li><router-link to="/test/scoped">使用Style Scoped</router-link></li>
       </ul>
     </div>
     <router-view/>

@@ -8,7 +8,7 @@ import TestComponent from "../components/TestComponent";
 import PageFooter from "../components/PageFooter";
 import TestAxios from "../components/TestAxios";
 import TestKeepAlive from "../components/TestKeepAlive";
-
+import TestStyleScoped from "../components/TestStyleScoped";
 Vue.use(Router)
 
 export default new Router({
@@ -59,6 +59,12 @@ export default new Router({
       path: '/test/keep-alive',
       name:'test-keep-alive',
       component:TestKeepAlive
+    }
+    ,
+    {
+      path: '/test/scoped',
+      name:'test-scoped',
+      component:TestStyleScoped
     }
   ]
 })
