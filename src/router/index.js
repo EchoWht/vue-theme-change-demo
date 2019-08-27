@@ -66,5 +66,11 @@ export default new Router({
       name:'test-scoped',
       component:TestStyleScoped
     }
+    ,
+    {
+      path: '/test/store',
+      name:'test-store',
+      component: (resolve) => require(['@/components/TestStore'], resolve)
+    }
   ]
 })
