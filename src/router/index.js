@@ -6,6 +6,8 @@ import TestPostcss from '@/components/TestPostcss'
 import HomePage from "../components/HomePage";
 import TestComponent from "../components/TestComponent";
 import PageFooter from "../components/PageFooter";
+import TestAxios from "../components/TestAxios";
+import TestKeepAlive from "../components/TestKeepAlive";
 
 Vue.use(Router)
 
@@ -45,6 +47,12 @@ export default new Router({
       path: '/test/page-footer',
       name:'page-footer',
       component: PageFooter
+    }
+    ,
+    {
+      path: '/test/keep-alive',
+      name:'test-keep-alive',
+      component:TestKeepAlive
     }
   ]
 })
