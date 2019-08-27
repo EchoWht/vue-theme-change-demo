@@ -8,6 +8,7 @@
         <li><router-link to="/test/tablegrid">一个简易的tablegrid</router-link></li>
         <li><router-link to="/test/postcss">如何使用postcss-utils</router-link></li>
         <li><router-link to="/test/component">使用component</router-link></li>
+        <li><router-link to="/test/keep-alive">使用keep-alive</router-link></li>
       </ul>
     </div>
     <router-view/>
