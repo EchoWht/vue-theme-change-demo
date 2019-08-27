@@ -50,6 +50,12 @@ export default new Router({
     }
     ,
     {
+      path: '/test/axios',
+      name:'test-axios',
+      component:TestAxios
+    }
+    ,
+    {
       path: '/test/keep-alive',
       name:'test-keep-alive',
       component:TestKeepAlive
