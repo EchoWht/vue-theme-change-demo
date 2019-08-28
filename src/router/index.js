@@ -72,5 +72,18 @@ export default new Router({
       name:'test-store',
       component: (resolve) => require(['@/components/TestStore'], resolve)
     }
+
+    ,
+    {
+      path: '/test/vuex',
+      name:'test-vuex',
+      component: (resolve) => require(['@/components/TestVuex'], resolve)
+    }
+    ,
+    {
+      path: '/test/vuex/other',
+      name:'test-vuex-other',
+      component: (resolve) => require(['@/components/TestVuex/OtherComponent'], resolve)
+    }
   ]
 })
