@@ -10,6 +10,7 @@
         <li><router-link to="/test/component">使用component</router-link></li>
         <li><router-link to="/test/keep-alive">使用keep-alive</router-link></li>
         <li><router-link to="/test/scoped">使用Style Scoped</router-link></li>
+        <li><router-link to="/test/store">简单的状态管理实现(未成功)</router-link></li>
         <li><router-link to="/test/vuex">使用Vuex</router-link></li>
       </ul>
     </div>
