@@ -91,5 +91,11 @@ export default new Router({
       name:'test-mixin',
       component: (resolve) => require(['@/components/TestMixin'], resolve)
     }
+    ,
+    {
+      path: '/test/extends',
+      name:'test-extends',
+      component: (resolve) => require(['@/components/TestExtends'], resolve)
+    }
   ]
 })
