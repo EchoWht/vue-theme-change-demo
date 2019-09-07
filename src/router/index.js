@@ -85,5 +85,11 @@ export default new Router({
       name:'test-vuex-other',
       component: (resolve) => require(['@/components/TestVuex/OtherComponent'], resolve)
     }
+    ,
+    {
+      path: '/test/mixin',
+      name:'test-mixin',
+      component: (resolve) => require(['@/components/TestMixin'], resolve)
+    }
   ]
 })
