@@ -39,6 +39,11 @@
           }
         },
         mounted() {
+        },
+        methods:{
+           childFunction(){
+             console.log("from child")
+           }
         }
     }
 </script>
